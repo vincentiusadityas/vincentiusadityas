@@ -1,0 +1,111 @@
+.project {
+    background: var(--color-bg);
+    /* background: linear-gradient(to top, var(--color-bg-2), var(--color-bg)); */
+    background-size: 100%;
+    height: fit-content;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.title {
+    color: var(--color-txt-pm-1);
+    font-size: var(--font-size-xl);
+    border-bottom: 1px solid var(--color-txt-sc-1);
+    width: fit-content;
+    margin: 0 auto 40px auto;
+}
+
+.project_card {
+    background-color: var(--color-bg-2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 var(--color-bg-shadow);
+    transition: 0.3s;
+    height: fit-content;
+    &:hover {
+        // cursor: pointer;
+        box-shadow: 0 8px 16px 0 var(--color-bg-shadow);
+    }
+    &:hover .card_overlay {
+        visibility: visible;
+        opacity: 0.8;
+    }
+}
+
+.card_deck {
+    margin-bottom: 20px;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    // grid-gap: .5rem;
+}
+
+.card_col {
+    margin-bottom: 20px;
+}
+
+.project_image {
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    visibility: hidden;
+}
+
+.card_overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text_title {
+    color: var(--color-txt-pm-1);
+    font-weight: 900;
+    font-size: clamp(var(--font-size-m), 2vw, var(--font-size-xxl));
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text_descr {
+    color: var(--color-txt-sc-2);
+    font-weight: 500;
+    font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-m));
+    margin-bottom: 5vw
+}
+
+.learn_more {
+    font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-m));
+    color: var(--color-txt-pm-1);
+    border: 2px solid var(--color-txt-sc-1);
+    border-radius: 5px;
+    padding: 5px;
+    transition: var(--transition);
+}
+
+.learn_more:hover {
+    cursor: pointer;
+    background-color: var(--color-bg-shadow);
+    color: var(--color-txt-sc-1);
+    transition: var(--transition);
+    text-decoration: none;
+}

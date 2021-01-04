@@ -1,0 +1,84 @@
+.home {
+    background: var(--color-bg);
+    /* background: linear-gradient(to top, var(--color-bg-2), var(--color-bg)); */
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 25vh;
+    padding-bottom: 5vh;
+}
+
+.welcome_message {
+    color: var(--color-txt-pm-1);
+    font-size: var(--font-size-l);
+    margin-left: 4px;
+    // :hover {
+    //     font;
+    // }
+    @media(max-width: 768px) {
+        margin-left: 2px;
+    }
+}
+
+.my_name {
+    margin-top: 10px;
+    font-size: clamp(var(--font-size-l), 9vw, var(--font-size-xxxxxl));
+    font-weight: 900;
+    color: var(--color-txt-pm-1);
+    span {
+        color: var(--color-txt-sc-2)
+    }
+}
+
+.description {
+    margin-top: 10px;
+    font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-l2));
+    // color: linear-gradient(red, yellow);
+    color: var(--color-txt-sc-2);
+    p {
+        margin: 0;
+    }
+    .descr_1 {
+        margin-bottom: 10px;
+        // margin-left: 40px;
+    }
+    .descr_2 {
+        margin-bottom: 10px;
+        opacity: 0.8;
+        // margin-left: 60px;
+    }
+    .descr_3 {
+        margin-bottom: 30px;
+        opacity: 0.6;
+        // margin-left: 80px;
+    }
+}
+
+.resume_button {
+    color: var(--color-txt-sc-2);
+    font-size: var(--font-size-m);
+    border: 2px solid var(--color-txt-sc-1);
+    border-radius: 5px;
+    padding: 10px;
+    // margin-top: 20px;
+    transition: var(--transition);
+}
+
+.resume_button:hover {
+    background-color: var(--color-bg-shadow);
+    color: var(--color-txt-sc-1);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.avatar {
+    // font-size: var(--font-size-l);
+    max-width: 42vw;
+    max-height: 42vh;
+    align-content: center;
+    @media(max-width: 768px) {
+        visibility: hidden;
+    }
+}

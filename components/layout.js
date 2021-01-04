@@ -1,0 +1,127 @@
+import Head from 'next/head'
+import Navbar from './navbar'
+import React, {useState, useRef} from 'react'
+import Splash from './splash'
+import styles from './layout.module.css'
+
+export default function Layout({children}) {
+    const [showNav, setShowNav] = useState(true)
+    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false)
+    const [scrollPos, setScrollPos] = useState(0)
+    const [navIsAtTop, setNavIsAtTop] = useState(true)
+    const [hamburgerChecked, setHamburgerChecked] = useState(false)
+    const rootRef = useRef()
+    const contentRef = useRef()
+
+    const handleScroll = () => {
+        setNavIsAtTop(window.scrollY==0)
+        setScrollPos(document.body.getBoundingClientRect().top)
+        setShowNav(document.body.getBoundingClientRect().top > scrollPos)
+    }
+
+    React.useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener('scroll', handleScroll)
+        }
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll])
+
+    const handleResize = () => {
+        setShowHamburgerMenu(window.innerWidth < 768)
+        console.log(showHamburgerMenu)
+    }
+
+    React.useEffect(() => {
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [handleResize])
+
+    const handleChecked = () => {
+        setHamburgerChecked(!hamburgerChecked)
+        console.log("test")
+        if (showHamburgerMenu && !hamburgerChecked) {
+            document.body.style.overflow = "hidden"
+            contentRef.current.style['filter'] = "blur(2px)"
+        } else {
+            document.body.style.overflow = "visible"
+            contentRef.current.style['filter'] = "unset"
+        }
+    }
+
+    return (
+        <>  
+            <Head>
+                {/* <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'/> */}
+                <script src="https://kit.fontawesome.com/ce4d4bea40.js" crossOrigin="anonymous"></script>
+                <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <title>Vincentius Aditya Sundjaja</title>
+                <link rel="icon" href="/logo.svg" />
+            </Head>
+            <div id="root" ref={rootRef}>
+                {/* <Splash></Splash> */}
+                <header>
+                    <Navbar 
+                        showNav={showNav} 
+                        navIsAtTop={navIsAtTop} 
+                        hamburgerMenu={showHamburgerMenu}
+                        handleChecked={handleChecked}
+                    >
+                    </Navbar>
+                </header>
+                
+                <div id="content" ref={contentRef}>
+                    {children}
+                </div>
+                
+                <footer className={styles.footer}>
+                    <a
+                        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        VINCENTIUS ADITYA SUNDJAJA
+                    </a>
+                </footer>
+            </div>
+        </>
+    )
+}
+
+// export default class Layout extends React.Component {
+//     constructor(props) {
+//         super(props)
+//     }
+
+//     componentDidMount() {
+//         window.addEventListener('scroll', this.handleScroll);
+//     }
+    
+//     componentWillUnmount() {
+//         window.removeEventListener('scroll', this.handleScroll);
+//     }
+    
+//     handleScroll = () => {
+//         console.log(window.innerHeight)
+//         if(window.scrollY > window.innerHeight) {
+
+//         }
+//     }
+
+//     render() {
+//         return (
+//             <>
+//                 <div id="root">
+//                     {/* <Splash></Splash> */}
+//                     <header>
+//                     <Navbar showNav={this.props.showNav} navIsAtTop={this.props.navIsAtTop}></Navbar>
+//                     </header>
+//                     <div>{this.props.children}</div>
+//                 </div>
+//             </>
+//         )
+//     }
+// }
