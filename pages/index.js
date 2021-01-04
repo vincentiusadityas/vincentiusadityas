@@ -9,6 +9,10 @@ import Contact from '../components/contact'
 
 import { getAllProjects } from '../lib/projects'
 
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 export async function getStaticProps() {
     // console.log("test")
     const allProjectsData = getAllProjects()

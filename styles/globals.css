@@ -74,6 +74,18 @@ a:hover {
     }
 }
 
+#icon {
+    font-size: var(--font-size-xs);
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+#icon:hover {
+    cursor: pointer;
+    color: #0aafe6;
+    transform: rotateY(360deg) scale(1.2);
+}
+
 
 /* #navbar {
     counter-reset: item 0;

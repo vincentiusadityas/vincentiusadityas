@@ -38,7 +38,7 @@ export default function CenteredModal(props) {
                 <div>
                     <a className={styles.visit_site_button} href={data.href} target="_blank">
                         Visit Site
-                        <FontAwesomeIcon icon={faExternalLinkAlt} className={styles.icon}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faExternalLinkAlt} className={styles.icon} size={"sm"}></FontAwesomeIcon>
                     </a>
                 </div>
             </Modal.Body>

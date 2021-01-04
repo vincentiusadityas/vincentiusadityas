@@ -55,7 +55,7 @@ export default function Layout({children}) {
         <>  
             <Head>
                 {/* <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'/> */}
-                <script src="https://kit.fontawesome.com/ce4d4bea40.js" crossOrigin="anonymous"></script>
+                {/* <script src="https://kit.fontawesome.com/ce4d4bea40.js" crossOrigin="anonymous"></script> */}
                 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
