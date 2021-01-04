@@ -2,7 +2,10 @@ import Head from 'next/head'
 import Navbar from './navbar'
 import React, {useState, useRef} from 'react'
 import Splash from './splash'
-import styles from './layout.module.css'
+import styles from './layout.module.scss'
+
+import { faGithub, faGitlab, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Layout({children}) {
     const [showNav, setShowNav] = useState(true)
@@ -78,13 +81,39 @@ export default function Layout({children}) {
                 </div>
                 
                 <footer className={styles.footer}>
-                    <a
-                        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        VINCENTIUS ADITYA SUNDJAJA
-                    </a>
+                    <div className={styles.social_links}>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/vincentiusadityas" target="_blank">
+                                    <FontAwesomeIcon icon={faGithub} size="2x" className={styles.social_icon}></FontAwesomeIcon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://gitlab.com/vasundjaja" target="_blank">
+                                    <FontAwesomeIcon icon={faGitlab} size="2x" className={styles.social_icon}></FontAwesomeIcon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/vincentiusadityas/" target="_blank">
+                                    <FontAwesomeIcon icon={faLinkedin} size="2x" className={styles.social_icon}></FontAwesomeIcon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/vincentiusadityas/" target="_blank">
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" className={styles.social_icon}></FontAwesomeIcon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a
+                            href=""
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            VINCENTIUS ADITYA SUNDJAJA
+                        </a>
+                    </div>
                 </footer>
             </div>
         </>

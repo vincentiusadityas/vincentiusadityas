@@ -34,14 +34,12 @@ export default function Navbar({ showNav,
                             </Link>
                         </li>
                         <li className={styles.navbar_list}>
-                            <Link href="/">
+                            <Link href="/#contact">
                                 <a>Contact</a>
                             </Link>
                         </li>
                     </ol>
-                    <Link href="/">
-                        <a className={styles.resume_button}>Resume</a>
-                    </Link>
+                    <a href="resume_VincentiusAdityaSundjaja.pdf" target="_blank" className={styles.resume_button}>Resume</a>
                 </div>
                 <div className={styles.hamburger_button}>
                     <input type="checkbox" onClick={handleChecked}/>

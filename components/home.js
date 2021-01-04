@@ -24,9 +24,7 @@ export default function Home() {
                                 Loves playing badminton and working out.
                             </p>
                         </div>
-                        <Link href="/">
-                            <a className={styles.resume_button}>View My Resume</a>
-                        </Link>
+                        <a href="resume_VincentiusAdityaSundjaja.pdf" target="_blank" className={styles.resume_button}>View My Resume</a>
                     </div>
                     <div className="col-md-5 d-flex justify-content-center">
                         <img src="/avatar.png" className={styles.avatar}/>

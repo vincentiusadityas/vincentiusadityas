@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Home from '../components/home'
 import About from '../components/about'
 import Project from '../components/project'
+import Contact from '../components/contact'
 
 import { getAllProjects } from '../lib/projects'
 
@@ -26,6 +27,7 @@ export default function LandingPage({ allProjectsData }) {
           <Home></Home>
           <Project allProjectsData={allProjectsData}></Project>
           <About></About>
+          <Contact></Contact>
       </div>
     </Layout>
   )
