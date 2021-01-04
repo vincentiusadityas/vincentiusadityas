@@ -41,7 +41,7 @@ export default function Layout({children}) {
 
     const handleChecked = () => {
         setHamburgerChecked(!hamburgerChecked)
-        console.log("test")
+        // console.log("test")
         if (showHamburgerMenu && !hamburgerChecked) {
             document.body.style.overflow = "hidden"
             contentRef.current.style['filter'] = "blur(2px)"

@@ -10,7 +10,7 @@ import Contact from '../components/contact'
 import { getAllProjects } from '../lib/projects'
 
 export async function getStaticProps() {
-    console.log("test")
+    // console.log("test")
     const allProjectsData = getAllProjects()
     return {
       props: {

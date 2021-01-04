@@ -29,9 +29,9 @@ export default function About() {
                                 Some of the technolgies I’ve been using:
                             </p>
                             <div>
-                                {techs.map((item) => (
+                                {techs.map((item, index) => (
                                     <>
-                                        <Badge pill className={styles.tech_badges}>{item}</Badge>{' '}
+                                        <Badge pill className={styles.tech_badges} key={index}>{item}</Badge>{' '}
                                     </>
                                 ))}
                             </div>

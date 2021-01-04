@@ -19,8 +19,8 @@ export default function CenteredModal(props) {
             <Modal.Header  className={styles.modal_header}>
                 {/* <Card.Img variant="top" src={"projects/"+data.id+"/"+data.thumbnail} className={styles.modal_image}></Card.Img> */}
                 <Carousel>
-                    {data.sub_thumbnails && data.sub_thumbnails.map((thumb) => (
-                        <Carousel.Item>
+                    {data.sub_thumbnails && data.sub_thumbnails.map((thumb, index) => (
+                        <Carousel.Item key={index}>
                             <img
                                 className={"d-block w-100 "}
                                 src={"projects/"+data.id+"/"+thumb}
