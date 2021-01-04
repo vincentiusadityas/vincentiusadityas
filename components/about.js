@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Badge from 'react-bootstrap/Badge'
 
+import React from 'react'
+
 export default function About() {
     const techs = ['Java', 'Python', 'C#', 'JavaScript', 'Flask', 'NodeJS', 'React', 'Vue', 'HTML & CSS', 'Tensorflow', 'Docker']
     return(
@@ -23,16 +25,16 @@ export default function About() {
                                 <span>{' '}<a href="https://www.uq.edu.au/" target="_blank">University of Queensland</a>.</span> <br/> <br/>
                                 I am currently looking for a job as a <span>software engineer.</span> Most of my
                                 experiences are in <span>web development</span>, but recently I also started to take interest in
-                                <span>machine learning.</span> <br/> <br/>
+                                <span> machine learning.</span> <br/> <br/>
                                 This is my <span>portfolio</span> website, created to showcase my current and future works. 
                                 I plan to do more <span>exciting projects</span> to improve my skills. <br/> <br/>
                                 Some of the technolgies I’ve been using:
                             </p>
                             <div>
                                 {techs.map((item, index) => (
-                                    <>
-                                        <Badge pill className={styles.tech_badges} key={index}>{item}</Badge>{' '}
-                                    </>
+                                    <React.Fragment key={index}>
+                                        <Badge pill className={styles.tech_badges}>{item}</Badge>{' '}
+                                    </React.Fragment>
                                 ))}
                             </div>
                         </Col>
