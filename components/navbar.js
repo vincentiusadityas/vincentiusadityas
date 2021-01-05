@@ -18,7 +18,7 @@ export default function Navbar({ showNav,
                 <img src="/logo.svg" alt="" className={styles.logo}/>
                 <div className={styles.navbar_wrapper}>
                     <ol className={styles.navbar_ordered_list}>
-                        <li className={styles.active_item + ' ' + styles.navbar_list}>
+                        <li className={styles.navbar_list}>
                             <Link href="/">
                                 <a>Home</a>
                             </Link>

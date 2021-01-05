@@ -22,6 +22,7 @@ export default function Layout({children}) {
     },[])
 
     const handleScroll = () => {
+        console.log(window.location.pathname+window.location.hash)
         setNavIsAtTop(window.scrollY==0)
         setScrollPos(document.body.getBoundingClientRect().top)
         setShowNav(hamburgerChecked || document.body.getBoundingClientRect().top > scrollPos)
