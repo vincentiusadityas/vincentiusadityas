@@ -14,11 +14,9 @@ export default function Contact() {
                     Whether you have any inquiries or just want to say hi, 
                     feel free to contact me through my email or my socials! :)</p>
                 </div>
-                <Link href="/">
-                    <a className={styles.email_button}>
-                        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> E-mail Me 
-                    </a>
-                </Link>
+                <a href="mailto: vasundjaja@gmail.com" className={styles.email_button}>
+                    <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon> E-mail Me 
+                </a>
             </section>
         </>
     )

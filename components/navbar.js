@@ -55,17 +55,17 @@ export default function Navbar({ showNav,
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/#project">
                                 <a>Projects</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/#about">
                                 <a>About</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/#contact">
                                 <a>Contact</a>
                             </Link>
                         </li>

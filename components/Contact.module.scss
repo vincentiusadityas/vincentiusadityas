@@ -47,6 +47,7 @@
 }
 
 .email_button:hover {
+    cursor: pointer;
     background-color: var(--color-bg-shadow);
     color: var(--color-txt-sc-1);
     transition: var(--transition);

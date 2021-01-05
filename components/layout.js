@@ -8,18 +8,23 @@ import { faGithub, faGitlab, faLinkedin, faInstagram } from '@fortawesome/free-b
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Layout({children}) {
+    const [windowWidth, setWindowWidth] = useState(null)
     const [showNav, setShowNav] = useState(true)
-    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false)
+    const [showHamburgerMenu, setShowHamburgerMenu] = useState(windowWidth < 768)
     const [scrollPos, setScrollPos] = useState(0)
     const [navIsAtTop, setNavIsAtTop] = useState(true)
     const [hamburgerChecked, setHamburgerChecked] = useState(false)
     const rootRef = useRef()
     const contentRef = useRef()
+    
+    React.useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    },[])
 
     const handleScroll = () => {
         setNavIsAtTop(window.scrollY==0)
         setScrollPos(document.body.getBoundingClientRect().top)
-        setShowNav(document.body.getBoundingClientRect().top > scrollPos)
+        setShowNav(hamburgerChecked || document.body.getBoundingClientRect().top > scrollPos)
     }
 
     React.useEffect(() => {
@@ -31,8 +36,18 @@ export default function Layout({children}) {
 
     const handleResize = () => {
         setShowHamburgerMenu(window.innerWidth < 768)
-        console.log(showHamburgerMenu)
     }
+
+    React.useEffect(() => {
+        if (showHamburgerMenu && hamburgerChecked) {
+            console.log("test3")
+            document.body.style.overflow = "hidden"
+            contentRef.current.style['filter'] = "blur(2px)"
+        } else {
+            document.body.style.overflow = "visible"
+            contentRef.current.style['filter'] = "unset"
+        }
+    }, [hamburgerChecked])
 
     React.useEffect(() => {
         window.addEventListener('resize', handleResize)
@@ -41,14 +56,6 @@ export default function Layout({children}) {
 
     const handleChecked = () => {
         setHamburgerChecked(!hamburgerChecked)
-        // console.log("test")
-        if (showHamburgerMenu && !hamburgerChecked) {
-            document.body.style.overflow = "hidden"
-            contentRef.current.style['filter'] = "blur(2px)"
-        } else {
-            document.body.style.overflow = "visible"
-            contentRef.current.style['filter'] = "unset"
-        }
     }
 
     return (
