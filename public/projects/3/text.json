@@ -5,5 +5,8 @@
     "description": "This is a simple website to demonstrate a train reserveation system with dummy data",
     "thumbnail": "thumb.PNG",
     "sub_thumbnails_num": 1,
-    "href": "in-reservation-system.herokuapp.com"
+    "href": {
+        "web": "train-reservation-system.herokuapp.com",
+        "gitlab": ""
+    }
 }

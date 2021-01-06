@@ -5,5 +5,8 @@
     "description": "Event Scheduler is a web app where people can create events and others can search and register.",
     "thumbnail": "thumb.PNG",
     "sub_thumbnails_num": 3,
-    "href": "http://eventscheduler-ec6bf.firebaseapp.com/"
+    "href": {
+        "web": "http://eventscheduler-ec6bf.firebaseapp.com/",
+        "gitlab": ""
+    }
 }

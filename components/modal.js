@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card'
 import Carousel from 'react-bootstrap/Carousel'
 import styles from './Modal.module.scss'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function CenteredModal(props) {
@@ -36,10 +37,27 @@ export default function CenteredModal(props) {
                     {data.description}
                 </p>
                 <div>
-                    <a className={styles.visit_site_button} href={data.href} target="_blank">
-                        Visit Site
+                    {data.href && data.href.web?
+                        <a className={styles.visit_site_button} href={data.href.web} target="_blank">
+                            Visit Site
                         <FontAwesomeIcon icon={faExternalLinkAlt} className={styles.icon} size={"sm"}></FontAwesomeIcon>
-                    </a>
+                        </a>
+                    :<></>
+                    }
+                    {data.href && data.href.gitlab?
+                        <a className={styles.visit_site_button} href={data.href.gitlab} target="_blank">
+                            See Source Code
+                        <FontAwesomeIcon icon={faGitlab} className={styles.icon} size={"sm"}></FontAwesomeIcon>
+                        </a>
+                    :<></>
+                    }
+                    {data.href && data.href.github?
+                        <a className={styles.visit_site_button} href={data.href.github} target="_blank">
+                            See Source Code
+                        <FontAwesomeIcon icon={faGithub} className={styles.icon} size={"sm"}></FontAwesomeIcon>
+                        </a>
+                    :<></>
+                    }
                 </div>
             </Modal.Body>
             <Modal.Footer className={styles.modal_footer}>

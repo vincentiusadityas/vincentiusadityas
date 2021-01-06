@@ -5,5 +5,8 @@
     "description": "Leisure Time is a web application used to help users browse trending books and movies",
     "thumbnail": "thumb.PNG",
     "sub_thumbnails_num": 3,
-    "href": "https://gitlab.com/vasundjaja/infs3208-project"
+    "href": {
+        "web": "",
+        "gitlab": "https://gitlab.com/vasundjaja/infs3208-project"
+    }
 }

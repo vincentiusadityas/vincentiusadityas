@@ -40,7 +40,6 @@ export default function Layout({children}) {
 
     React.useEffect(() => {
         if (showHamburgerMenu && hamburgerChecked) {
-            console.log("test3")
             document.body.style.overflow = "hidden"
             contentRef.current.style['filter'] = "blur(2px)"
         } else {
