@@ -6,7 +6,7 @@
     "thumbnail": "thumb.PNG",
     "sub_thumbnails_num": 1,
     "href": {
-        "web": "train-reservation-system.herokuapp.com",
-        "gitlab": ""
+        "web": "https://train-reservation-system.herokuapp.com/",
+        "gitlab": "https://gitlab.com/TrainReservationSystem/TrainReservationSystem"
     }
 }

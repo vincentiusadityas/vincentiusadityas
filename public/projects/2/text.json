@@ -7,6 +7,6 @@
     "sub_thumbnails_num": 3,
     "href": {
         "web": "http://eventscheduler-ec6bf.firebaseapp.com/",
-        "gitlab": ""
+        "gitlab": "https://github.com/vincentiusadityas/react-event-scheduler"
     }
 }

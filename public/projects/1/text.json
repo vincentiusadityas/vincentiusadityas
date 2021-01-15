@@ -6,7 +6,7 @@
     "thumbnail": "thumb.PNG",
     "sub_thumbnails_num": 3,
     "href": {
-        "web": "",
-        "gitlab": "https://gitlab.com/vasundjaja/infs3208-project"
+        "web": "http://leisuretime-me.herokuapp.com/",
+        "github": "https://github.com/vincentiusadityas/leisuretime"
     }
 }

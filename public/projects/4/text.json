@@ -1,0 +1,12 @@
+{
+    "id": 4,
+    "title": "Object Recognizer",
+    "technology": "Vue JS / Firebase Hosting",
+    "description": "This is a simple website I made trying to learn the Google Vision API. I have a few features in mind but so far only one has been developed (simple object recognitions).",
+    "thumbnail": "thumb.PNG",
+    "sub_thumbnails_num": 3,
+    "href": {
+        "web": "https://recognizer-80b48.web.app/",
+        "gitlab": "https://github.com/vincentiusadityas/object-recognition-app"
+    }
+}
