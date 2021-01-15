@@ -30,9 +30,14 @@
     // height: 260px;
     max-width: 20vw;
     border-radius: 10px;
-    opacity: 0.5;
+    opacity: 0.55;
     -webkit-filter: drop-shadow(10px 8px 8px var(--color-bg-shadow));
     filter: drop-shadow(10px 8px 8px var(--color-bg-shadow));
+    transition: var(--transition);
+    &:hover {
+        transform: scale(1.01);
+        opacity: 0.95;
+    }
     @media(max-width: 768px) {
         max-width: 40vw;
         margin-bottom: 20px;
