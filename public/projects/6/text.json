@@ -1,0 +1,12 @@
+{
+    "id": 6,
+    "title": "Discord Music Bot",
+    "technology": "Node JS",
+    "description": "A discord music bot I made. It uses discord.js, a Node.js module that wraps the Discord API for easier interaction",
+    "thumbnail": "thumb.PNG",
+    "sub_thumbnails_num": 5,
+    "href": {
+        "discord": "https://stockview.vincentiusadityas.dev/",
+        "gitlab": "https://github.com/vincentiusadityas/discord-lyrics-bot"
+    }
+}

@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 import Carousel from 'react-bootstrap/Carousel'
 import styles from './Modal.module.scss'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faGitlab, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function CenteredModal(props) {
@@ -41,6 +41,13 @@ export default function CenteredModal(props) {
                         <a className={styles.visit_site_button} href={data.href.web} target="_blank">
                             Visit Site
                         <FontAwesomeIcon icon={faExternalLinkAlt} className={styles.icon} size={"sm"}></FontAwesomeIcon>
+                        </a>
+                    :<></>
+                    }
+                    {data.href && data.href.discord?
+                        <a className={styles.visit_site_button} href={data.href.web} target="_blank">
+                            Check the Bot
+                        <FontAwesomeIcon icon={faDiscord} className={styles.icon} size={"sm"}></FontAwesomeIcon>
                         </a>
                     :<></>
                     }

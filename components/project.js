@@ -57,48 +57,6 @@ export default function Project({ allProjectsData }) {
                             </Card>
                         </Col>
                     ))}
-                    {/* <Col className={styles.card_col}>
-                        <Card className={styles.project_card}>
-                            <Card.Img variant="top" className={styles.project_image} src="projects/2/thumb.PNG"></Card.Img>
-                            <div className={styles.card_overlay}>
-                                <div className={styles.card_overlay_text}>
-                                    <div className={styles.text_title}>Event Scheduler</div>
-                                    <div className={styles.text_descr}>React JS / Firebase</div>
-                                    <Link href="/">
-                                        <a className={styles.learn_more}>Learn More</a>
-                                    </Link>
-                                </div>
-                            </div>
-                        </Card>
-                    </Col>
-                    <Col className={styles.card_col}>
-                        <Card className={styles.project_card}>
-                            <Card.Img variant="top" className={styles.project_image} src="projects/3/thumb.PNG"></Card.Img>
-                            <div className={styles.card_overlay}>
-                                <div className={styles.card_overlay_text}>
-                                    <div className={styles.text_title}>Train Reservation System</div>
-                                    <div className={styles.text_descr}>Python / Flask</div>
-                                    <Link href="/">
-                                        <a className={styles.learn_more}>Learn More</a>
-                                    </Link>
-                                </div>
-                            </div>
-                        </Card>
-                    </Col>
-                    <Col className={styles.card_col}>
-                        <Card className={styles.project_card}>
-                            <Card.Img variant="top" className={styles.project_image} src="projects/1/thumb.PNG"></Card.Img>
-                            <div className={styles.card_overlay}>
-                                <div className={styles.card_overlay_text}>
-                                    <div className={styles.text_title}>Leisure Time</div>
-                                    <div className={styles.text_descr}>Python / Flask</div>
-                                    <Link href="/">
-                                        <a className={styles.learn_more}>Learn More</a>
-                                    </Link>
-                                </div>
-                            </div>
-                        </Card>
-                    </Col> */}
                 </Row>
             </section>
         </>
