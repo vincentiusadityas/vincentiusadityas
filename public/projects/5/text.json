@@ -1,0 +1,12 @@
+{
+    "id": 5,
+    "title": "StockView",
+    "technology": "Next JS / react bootstrap",
+    "description": "I want to learn and start investing in stocks, so I made a website to view stock data. It's not perfect and not meant to be used for stock analysis. Data are taken from Google Finance and finnhub.io API.",
+    "thumbnail": "thumb.PNG",
+    "sub_thumbnails_num": 2,
+    "href": {
+        "web": "https://stockview.vincentiusadityas.dev/",
+        "gitlab": "https://github.com/vincentiusadityas/stockview"
+    }
+}
