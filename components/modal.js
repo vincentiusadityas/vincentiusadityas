@@ -45,7 +45,7 @@ export default function CenteredModal(props) {
                     :<></>
                     }
                     {data.href && data.href.discord?
-                        <a className={styles.visit_site_button} href={data.href.web} target="_blank">
+                        <a className={styles.visit_site_button} href={data.href.discord} target="_blank">
                             Check the Bot
                         <FontAwesomeIcon icon={faDiscord} className={styles.icon} size={"sm"}></FontAwesomeIcon>
                         </a>
